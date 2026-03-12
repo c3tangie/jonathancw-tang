@@ -198,6 +198,14 @@ const Navbar = () => {
                 </Link>
                 
                 <Link 
+                  to="/resume" 
+                  className="group relative text-gray-700 hover:text-blue-900 font-semibold transition-all duration-300 text-base md:text-lg"
+                >
+                  Resume
+                  <span className="absolute left-0 -bottom-2 w-0 h-0.5 bg-gradient-to-r from-blue-900 to-red-600 group-hover:w-full transition-all duration-300"></span>
+                </Link>
+                
+                <Link 
                   to="/contact" 
                   className="group relative text-gray-700 hover:text-blue-900 font-semibold transition-all duration-300 text-base md:text-lg"
                 >
@@ -285,6 +293,14 @@ const Navbar = () => {
                 onClick={closeMobileMenu}
               >
                 Projects
+              </Link>
+              
+              <Link 
+                to="/resume" 
+                className="block px-4 py-3 text-gray-700 hover:text-blue-900 hover:bg-gray-50 font-semibold transition-colors duration-200 border-l-4 border-transparent hover:border-blue-900"
+                onClick={closeMobileMenu}
+              >
+                Resume
               </Link>
               
               <Link 
