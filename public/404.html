@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Single Page App</title>
     <script type="text/javascript">
-      // Let's change the title for kicks and giggles.
-      document.title = "Loading...";
-      // If you're trying to load a route and you get this message, a stray slash is the culprit. Unfortunately the best way to handle this with GitHub Pages is to use this JavaScript redirect (credit: http://stackoverflow.com/questions/2668499/react-router-urls-dont-work-when-refreshing-a-github-pages-site/26684946#26684946).
-      var segmentCount = 0;
+      // Redirect to the home page with the route preserved as a query parameter
+      // This allows React Router to handle the routing client-side
       var l = window.location;
+      // segmentCount = 1 because we have /jonathancw-tang/ as the base
+      var segmentCount = 1;
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?/' +
