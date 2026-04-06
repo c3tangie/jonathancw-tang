@@ -5,7 +5,7 @@ import BackToTop from '@components/BackToTopButton'
 
 const Resume = () => {
   // Points to your resume PDF in the public folder
-  const resumeUrl = '/Resume 2Ci Jonathan Tang (3) (4).pdf'
+  const resumeUrl = '/jonathancw-tang/Resume 2Ci Jonathan Tang (3) (4).pdf'
 
   const handleDownload = () => {
     const link = document.createElement('a')
