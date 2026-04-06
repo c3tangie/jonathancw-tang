@@ -3,29 +3,25 @@ import React from 'react'
 const ContactInfo = () => {
   const contactDetails = [
     {
-      icon: "📧",
       title: "Email",
-      detail: "your.email@example.com",
-      link: "mailto:your.email@example.com"
+      detail: "jonathancw.tang@mail.utoronto.ca",
+      link: "mailto:jonathancw.tang@mail.utoronto.ca"
     },
     {
-      icon: "📱",
       title: "Phone",
-      detail: "+1 (555) 123-4567",
-      link: "tel:+15551234567"
+      detail: "+1 (250) 607-8868",
+      link: "tel:+1 (250) 607-8868"
     },
     {
-      icon: "📍",
       title: "Location",
-      detail: "Your City, State",
+      detail: "Toronto ON, Canada",
       link: null
     }
   ]
 
   const socialLinks = [
-    { name: "GitHub", url: "https://github.com/yourusername", icon: "🔗" },
-    { name: "LinkedIn", url: "https://linkedin.com/in/yourprofile", icon: "💼" },
-    { name: "Twitter", url: "https://twitter.com/yourhandle", icon: "🐦" }
+    { name: "GitHub", url: "https://github.com/c3tangie" },
+    { name: "LinkedIn", url: "https://linkedin.com/in/jonathancw-tang" },
   ]
 
   return (

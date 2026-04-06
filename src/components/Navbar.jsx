@@ -108,7 +108,7 @@ const Navbar = () => {
             {/* Social Media Icons - Larger */}
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/c3tangie"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 flex items-center justify-center text-gray-700 hover:text-slate-700 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-110"
@@ -120,7 +120,7 @@ const Navbar = () => {
               </a>
               
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://linkedin.com/in/jonathancw-tang"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 flex items-center justify-center text-gray-700 hover:text-slate-700 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-110"
@@ -132,7 +132,7 @@ const Navbar = () => {
               </a>
               
               <a
-                href="mailto:your.email@example.com"
+                href="mailto:jonathancw.tang@mail.utoronto.ca"
                 className="w-11 h-11 flex items-center justify-center text-gray-700 hover:text-slate-700 hover:bg-gray-100 rounded-lg transition-all duration-200 hover:scale-110"
                 aria-label="Email"
               >
@@ -155,7 +155,7 @@ const Navbar = () => {
                 to="/about" 
                 className="px-4 py-2 text-gray-700 hover:text-slate-700 hover:bg-gray-100 font-medium transition-all duration-200 rounded-lg"
               >
-                Skills
+                About Me
               </Link>
                 
               <Link 
@@ -163,14 +163,15 @@ const Navbar = () => {
                 className="px-4 py-2 text-gray-700 hover:text-slate-700 hover:bg-gray-100 font-medium transition-all duration-200 rounded-lg"
               >
                 Projects
-              </Link>
+              </Link> 
+              
                 
-              <Link 
+              {/* <Link 
                 to="/experience" 
                 className="px-4 py-2 text-gray-700 hover:text-slate-700 hover:bg-gray-100 font-medium transition-all duration-200 rounded-lg"
               >
                 Experience
-              </Link>
+              </Link>  */}
                 
               <Link 
                 to="/resume" 
@@ -179,12 +180,12 @@ const Navbar = () => {
                 Resume
               </Link>
                 
-              <Link 
+              {/* <Link 
                 to="/contact" 
                 className="px-4 py-2 text-gray-700 hover:text-slate-700 hover:bg-gray-100 font-medium transition-all duration-200 rounded-lg"
               >
                 Contact
-              </Link>
+              </Link> */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -258,7 +259,7 @@ const Navbar = () => {
               </Link>
               
               <Link 
-                to="/experience" 
+                to="/projects" 
                 className="block px-4 py-3 text-gray-700 hover:text-slate-700 hover:bg-gray-100 font-medium transition-all duration-200 rounded-lg"
                 onClick={closeMobileMenu}
               >

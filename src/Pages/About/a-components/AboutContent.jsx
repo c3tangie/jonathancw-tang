@@ -2,7 +2,7 @@ import React from 'react'
 
 const AboutContent = () => {
   return (
-    <section className="max-w-4xl mx-auto px-4 py-16">
+    <section className="max-w-7xl mx-auto sm:px-10 py-16">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div>
           <img 
@@ -12,19 +12,16 @@ const AboutContent = () => {
           />
         </div>
         <div>
-          <h2 className="text-3xl font-bold mb-6">Hi, I'm [Your Name]</h2>
-          <p className="text-gray-700 mb-4 leading-relaxed">
-            I'm a passionate developer with a love for creating beautiful and functional web experiences. 
-            With a background in [Your Background], I bring a unique perspective to every project I work on.
+          <h2 className="text-3xl font-bold mb-6">Welcome to my Portfolio!</h2>
+          <p className="text-gray-700 mb-6 leading-relaxed">
+            I am Jonathan Tang, a third year Civil Engineer undergraduate student, pursuing a minor in Artificial Intelligence Engineering in the University of Toronto. 
           </p>
+          <h2 className="text-2xl font-bold mb-2">My Path and Interests: Why Civil Engineering?</h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            Over the years, I've honed my skills in various technologies and frameworks, always staying 
-            curious and eager to learn new things. My goal is to build products that make a difference 
-            and solve real-world problems.
+             I am currently most drawn to transportation engineering, traffic engineering, and city planning, fields that shape and optimize how people move and experience the city. These interests naturally connect to the skills I’ve been developing such as transportation modelling, data analysis through Excel, and programming, all of which allow me to approach engineering problems through a lens of optimization. 
           </p>
           <p className="text-gray-700 leading-relaxed">
-            When I'm not coding, you can find me [Your Hobbies/Interests]. I believe in continuous 
-            learning and collaboration, and I'm always excited to take on new challenges.
+            Alongside these engineering interests, I’ve also been exploring computer programming, machine learning, and web development as personal interest and a desire to expand my skill set. These fields helped me think more systematically about problems and sharpen my analytical mindset. Together, these experiences have shaped the way I approach engineering, encouraging me to refine ideas, simplify processes, and focus on optimization.
           </p>
         </div>
       </div>
