@@ -14,7 +14,7 @@ import GroundwaterProject from './Pages/projects/GroundwaterProject'
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/jonathancw-tang/">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
