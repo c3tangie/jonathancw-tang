@@ -4,7 +4,6 @@ import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
 import ScrollToTop from '@components/ScrollToTop'
 import Aimsun_GIF from '@assets/aimsun_gif.gif'
-import Aimsun_Video from '@assets/Group 12 CIV332 Project.mov'
 
 const AimsunProject = () => {
   const navigate = useNavigate()
@@ -38,13 +37,13 @@ const AimsunProject = () => {
 
       {/* Video Player */}
       <div className="float-right ml-12 mb-12 w-[500px] sm:w-[530px] h-[380px] sm:h-[452px] rounded-lg overflow-hidden shadow-lg bg-black clear-right">
-        <video
-          src={Aimsun_Video}
+        <iframe
+          src="https://drive.google.com/file/d/1sVx8priAFIvwy-j9YRayLnNPVkkLPc3D/preview"
           title="Aimsun Microsimulation Video"
           className="w-full h-full"
-          controls
+          allow="autoplay"
           allowFullScreen
-        />
+        ></iframe>
       </div>
       <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Results of the microsimulation and conclusion</h3>
 

@@ -6,7 +6,6 @@ import ScrollToTop from '@components/ScrollToTop'
 import tp1 from '@assets/tp_1.png'
 import tp2 from '@assets/tp_2.png'
 import tp4 from '@assets/tp_4.png'
-import FinalCutVideo from '@assets/Final Cut.mov'
 
 const TransportationProject = () => {
   const navigate = useNavigate()
@@ -52,13 +51,13 @@ const TransportationProject = () => {
 
       {/* Video Player */}
           <div className="float-right mt-8 mb-12 ml-8 w-[500px] sm:w-[600px] h-[380px] sm:h-[452px] rounded-lg overflow-hidden shadow-lg bg-black">
-            <video
-              src={FinalCutVideo}
+            <iframe
+              src="https://drive.google.com/file/d/1A4j9Gl2Z9Grtg6yeV-J0GTFZqDdkm5UH/preview"
               title="Transportation Impacts Video"
               className="w-full h-full"
-              controls
+              allow="autoplay"
               allowFullScreen
-            />
+            ></iframe>
           </div>
 
           <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">What this project taught me </h3>
