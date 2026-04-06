@@ -2,15 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Single Page App</title>
+    <title>Loading...</title>
     <script type="text/javascript">
-      // Store the redirect path before reloading
-      var redirect = window.location.pathname;
-      if (redirect !== '/' && !redirect.includes('/?')) {
-        // Redirect to root with the original path as a query parameter
-        sessionStorage.redirect = redirect;
-        window.location.href = '/jonathancw-tang/?redirect=' + encodeURIComponent(redirect);
-      }
+      // Save the path that user was trying to access
+      var pathSegments = window.location.pathname.split('/').filter(Boolean);
+      var redirect = '/' + pathSegments.join('/');
+      
+      // Store it so React can access it
+      sessionStorage.setItem('postBuildRedirect', redirect);
+      
+      // Redirect to the root so React Router can handle it
+      window.location.replace(window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1));
     </script>
   </head>
   <body>

@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
 import Home from './Pages/Home/home'
 import Projects from './Pages/projects/Projects'
@@ -12,10 +12,25 @@ import ConcreteProject from './Pages/projects/ConcreteProject'
 import TransportationProject from './Pages/projects/TransportationProject'
 import GroundwaterProject from './Pages/projects/GroundwaterProject'
 
+const RedirectHandler = () => {
+  const navigate = useNavigate()
+  
+  useEffect(() => {
+    if (window.__REDIRECT__) {
+      const redirectPath = window.__REDIRECT__.replace('/jonathancw-tang', '')
+      navigate(redirectPath, { replace: true })
+      delete window.__REDIRECT__
+    }
+  }, [navigate])
+  
+  return null
+}
+
 const App = () => {
   return (
     <Router basename="/jonathancw-tang/">
       <ScrollToTop />
+      <RedirectHandler />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
