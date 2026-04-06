@@ -138,48 +138,48 @@ const Home = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-center text-gray-900 mb-12">
-            What I Do
+            Feel free to navigate to my other pages!
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Skill Card 1 */}
-            <div className="group p-8 bg-white border-2 border-gray-200 rounded-2xl hover:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            {/* Skill Card 1 - About Me */}
+            <Link to="/about" className="group p-8 bg-white border-2 border-gray-200 rounded-2xl hover:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
               <div className="w-16 h-16 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-slate-800 transition-colors" style={{ backgroundColor: '#334e68' }}>
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Full Stack Development</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">About Me</h3>
               <p className="text-gray-600 leading-relaxed">
-                Building robust web applications with modern technologies and best practices.
+                Learn more about my journey, skills, and passion.
               </p>
-            </div>
+            </Link>
 
-            {/* Skill Card 2 */}
-            <div className="group p-8 bg-white border-2 border-gray-200 rounded-2xl hover:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            {/* Skill Card 2 - Projects */}
+            <Link to="/projects" className="group p-8 bg-white border-2 border-gray-200 rounded-2xl hover:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
               <div className="w-16 h-16 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-slate-800 transition-colors" style={{ backgroundColor: '#334e68' }}>
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">UI/UX Design</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Projects</h3>
               <p className="text-gray-600 leading-relaxed">
-                Creating intuitive and beautiful user interfaces that enhance user experience.
+                Here are some of my most notable projects and accomplishments!
               </p>
-            </div>
+            </Link>
 
-            {/* Skill Card 3 */}
-            <div className="group p-8 bg-white border-2 border-gray-200 rounded-2xl hover:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+            {/* Skill Card 3 - Resume */}
+            <Link to="/resume" className="group p-8 bg-white border-2 border-gray-200 rounded-2xl hover:border-slate-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 cursor-pointer">
               <div className="w-16 h-16 bg-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-slate-800 transition-colors" style={{ backgroundColor: '#334e68' }}>
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Performance Optimization</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Resume</h3>
               <p className="text-gray-600 leading-relaxed">
-                Ensuring fast, efficient, and scalable applications for the best user experience.
+                Feel free to take a look through the PDF preview or download it directly!
               </p>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

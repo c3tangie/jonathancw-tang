@@ -17,7 +17,7 @@ const AboutHero = () => {
       <div className="relative max-w-7xl mx-auto px-4 text-center">
         <h1 className="text-5xl font-bold mb-4">About Me</h1>
         <p className="text-xl text-gray-100">
-          Learn more about my journey, skills, and passion
+          Learn more about my journey, skills, and passion.
         </p>
       </div>
     </section>

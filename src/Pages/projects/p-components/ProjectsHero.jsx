@@ -14,8 +14,7 @@ const ProjectsHero = () => {
       <div className="relative max-w-7xl mx-auto px-4 text-center">
         <h1 className="text-5xl font-bold mb-4">Projects</h1>
         <p className="text-xl opacity-90">
-          Here listed below are my most notable projects!
-        </p>
+          Here are some of my most notable projects and accomplishments!        </p>
       </div>
     </section>
   )
