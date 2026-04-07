@@ -51,10 +51,10 @@ const Home = () => {
             </div>
 
             {/* Right Side - Text Content */}
-            <div className="text-center lg:text-left max-w-2xl">
+            <div className="text-center lg:text-left max-w-3xl">
 
               {/* Main heading */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-12">
                 Hi, I'm{' '}
                 <span className="text-slate-700" style={{ color: '#334e68' }}>
                   Jonathan Tang.
@@ -62,8 +62,8 @@ const Home = () => {
               </h1>
 
               {/* Subtitle */}
-              <div className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-700 mb-8">
-                <span className="inline-block">
+              <div className="text-xl leading-relaxed sm:text-2xl md:text-3xl font-semibold text-gray-700 mb-8">
+                <span className="incline-block">
                   Civil Engineer Minoring in Artificial Intellingence Engineering at University of Toronto
                 </span>
               </div>
