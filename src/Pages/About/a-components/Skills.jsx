@@ -7,7 +7,7 @@ const Skills = () => {
       skills: ["Aimsun", "AutoCAD", "Rhinocerous3D", "Revit", "ArcGIS Pro"]
     },
     {
-      category: "Backend",
+      category: "Programming",
       skills: ["Python", "PyTorch", "C", "C++", "Javascript"]
     },
     {
