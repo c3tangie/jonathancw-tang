@@ -37,7 +37,7 @@ const TransportationProject = () => {
 
       <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">My Role and Filming the Video</h3>
       <p className="text-lg text-gray-700 leading-relaxed mb-12">
-        For this project, my main responsibility was serving as the group's video editor, which meant shaping the video's format, flow, pacing, and content visualization. I also handled much of the filming. This included documenting the heavy construction presence around neighbourhoods like Thorncliffe Park and Flemingdon Park, where community spaces were surrounded by barriers. I also assisted in filming the overcrowding shots of Lines 1 and 2 at Bloor–Yonge station during the Wednesday afternoon peak hours. Gathering these visuals gave our team firsthand material to work with and helped us present the transportation impacts in a way that felt real and connected to lived experience.
+        For this project, my main responsibility was serving as the group's video editor, which meant shaping the video's format, flow, pacing, and content visualization. I also handled much of the filming. This included documenting the heavy construction presence around neighbourhoods like Thorncliffe Park and Flemingdon Park, where community spaces were surrounded by barriers. I also assisted in filming the overcrowding shots of Lines 1 and 2 at Bloor-Yonge station during the Wednesday afternoon peak hours. Gathering these visuals gave our team firsthand material to work with and helped us present the transportation impacts in a way that felt real and connected to lived experience.
       </p>
       <div className="clear-both"></div>
 

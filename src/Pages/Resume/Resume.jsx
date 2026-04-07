@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
 import BackToTop from '@components/BackToTopButton'
+import resumeBanner from '@assets/resume_banner.jpg'
 
 const Resume = () => {
   // Points to your resume PDF in the public folder
@@ -21,17 +22,24 @@ const Resume = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <div 
-        className="bg-gradient-to-r from-slate-700 to-slate-800 text-white py-20"
-        style={{ backgroundImage: 'linear-gradient(to right, #334e68, #2c3e50)' }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative text-white py-20 bg-cover bg-center overflow-hidden">
+        {/* Banner image */}
+        <img 
+          src={resumeBanner} 
+          alt="Resume banner" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        
+        {/* Text content */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Here is my resume</h1>
           <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto">
             Feel free to take a look through the PDF preview or download it directly!
           </p>
         </div>
-      </div>
+      </section>
 
       {/* Resume Content Section */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
