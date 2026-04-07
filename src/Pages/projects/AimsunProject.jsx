@@ -7,6 +7,7 @@ import Aimsun_GIF from '@assets/aimsun_gif.gif'
 import odMatrix from '@assets/od_matrix.png'
 import odMatrix2 from '@assets/od_matrix2.png'
 import planView from '@assets/plan_view.png'
+import aimsunExcel from '@assets/aimsun_excel.png'
 
 const AimsunProject = () => {
   const navigate = useNavigate()
@@ -22,6 +23,7 @@ const AimsunProject = () => {
       <ScrollToTop />
       <section className="max-w-7xl mx-auto sm:px-10 py-16">
       <h2 className="text-4xl font-bold text-gray-900 mb-8">Aimsun Microsimulation Project (February 2026 - April 2026)</h2>
+      <img src={planView} className="float-right ml-8 h-80 sm:h-64 w-[350px] sm:w-[470px] object-cover rounded-lg shadow-lg object-center" />
       <p className="text-lg text-gray-700 mb-12 leading-relaxed">
         This project focused on developing and analyzing a simplified traffic network using Aimsun Next microsimulation to evaluate the impacts of incidents and control strategies on traffic performance created for CIV332: Transportation II. The model represented a freeway corridor with adjacent arterial routes and on-ramps, allowing for the study of congestion propagation, rerouting behavior, and control interventions. The objective was to simulate realistic traffic dynamics under both incident and non-incident conditions, and to assess how traffic signal control and ramp metering strategies influence flow efficiency and delay across the network. 
       </p>
@@ -29,14 +31,14 @@ const AimsunProject = () => {
 
 <img src={odMatrix2} className="float-right ml-8 h-80 sm:h-80 w-[350px] sm:w-[470px] object-cover rounded-lg shadow-lg object-center" />
       <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Network Modeling and Traffic Dynamics</h3>
-      <p className="text-lg text-gray-700 mb-14 leading-relaxed">    
+      <p className="text-lg text-gray-700 mb-16 leading-relaxed">    
         The network was constructed using sections (links) and nodes (intersections), with an incident introduced by applying a capacity reduction to a short freeway segment (roughly 30 m), creating a bottleneck. Simulation results showed clear shockwave propagation, where reduced discharge capacity increased upstream congestion. Delay peaked at approximately 80 seconds before stabilizing at 20 to 30 seconds after the incident cleared, indicating persistent downstream constraints. Traffic redistribution was also observed, with flow on an alternative arterial route increasing from around 600 to 1200 veh/h, leading to secondary congestion and delays up to 130 seconds. This demonstrated how localized disruptions can impact the entire network. 
       </p>
 
 
-    <img src={planView} className="float-left mr-8 h-80 sm:h-auto w-[350px] sm:w-[460px] object-cover rounded-lg shadow-lg object-center" />
+    <img src={aimsunExcel} className="float-left mr-8 h-80 sm:h-auto w-[350px] sm:w-[540px] object-cover rounded-lg shadow-lg object-center" />
       <h3 className="text-2xl font-bold text-gray-900 mb-4 mt-8">Control Strategies and Performance</h3>
-      <p className="text-lg text-gray-700 mb-12 leading-relaxed">
+      <p className="text-lg text-gray-700 mb-16 leading-relaxed">
         Traffic signal timing was optimized using the Webster Method, where critical lane flows extracted from the simulation were used to define phase priorities and allocate green time. A four-phase signal system (north-south and west-east, each with separate left-turn and through movements) was implemented to reflect realistic intersection operations. The design incorporated key operational assumptions, including a saturation flow rate of 2000 veh/hr/lane, lost time of 3.5 seconds per phase, and no heavy vehicle effects to ensure consistency across all approaches. Yellow timing was selected to eliminate the dilemma zone based on approach speeds, and pedestrian crossing requirements were explicitly checked, leading to adjustments in green times and an increased overall cycle length to maintain safety. Ramp metering was applied at two on-ramps to regulate merging flows under congested conditions. By controlling vehicle entry rates onto the freeway, the system reduced turbulence at merging points and improved discharge flow at bottlenecks. However, the level of improvement differed between the two ramps due to variations in local demand and network configuration, highlighting the sensitivity of control strategies to surrounding conditions.
       </p>
 
