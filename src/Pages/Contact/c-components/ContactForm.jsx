@@ -23,9 +23,9 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-8">
+    <div className="bg-white rounded-lg shadow-lg p-8 h-full flex flex-col">
       <h2 className="text-3xl font-bold mb-6">Send a Message</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} className="flex flex-1 flex-col gap-4">
         <div>
           <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
             Name
@@ -37,7 +37,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:border-transparent"
             placeholder="Your Name"
           />
         </div>
@@ -52,11 +52,11 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:border-transparent"
             placeholder="your.email@example.com"
           />
         </div>
-        <div>
+        <div className="flex flex-1 flex-col min-h-0">
           <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
             Message
           </label>
@@ -66,14 +66,13 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             required
-            rows="6"
-            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent resize-none"
+            className="w-full flex-1 min-h-48 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-navy-600 focus:border-transparent resize-none"
             placeholder="Your message here..."
           ></textarea>
         </div>
         <button
           type="submit"
-          className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors font-medium"
+          className="w-full bg-navy-700 text-white py-3 rounded-lg hover:bg-navy-800 transition-colors font-medium"
         >
           Send Message
         </button>

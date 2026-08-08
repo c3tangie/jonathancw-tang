@@ -22,6 +22,7 @@ const ContactInfo = () => {
   const socialLinks = [
     { name: "GitHub", url: "https://github.com/c3tangie" },
     { name: "LinkedIn", url: "https://linkedin.com/in/jonathancw-tang" },
+    { name: "Twitter", url: "https://x.com/c3tangie?s=11" },
   ]
 
   return (
@@ -37,7 +38,7 @@ const ContactInfo = () => {
                 {item.link ? (
                   <a 
                     href={item.link}
-                    className="text-purple-600 hover:text-purple-700 transition-colors"
+                    className="text-navy-600 hover:text-navy-700 transition-colors"
                   >
                     {item.detail}
                   </a>
@@ -51,7 +52,7 @@ const ContactInfo = () => {
       </div>
 
       <div className="bg-white rounded-lg shadow-lg p-8">
-        <h2 className="text-2xl font-bold mb-4">Connect With Me</h2>
+        <h2 className="text-2xl font-bold mb-4">Online Platforms</h2>
         <div className="space-y-3">
           {socialLinks.map((social, index) => (
             <a
@@ -59,7 +60,7 @@ const ContactInfo = () => {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-purple-50 transition-colors"
+              className="flex items-center p-3 bg-gray-50 rounded-lg hover:bg-navy-50 transition-colors"
             >
               <span className="text-2xl mr-3">{social.icon}</span>
               <span className="font-medium text-gray-800">{social.name}</span>
