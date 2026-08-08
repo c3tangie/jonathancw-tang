@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
 import BackToTop from '@components/BackToTopButton'
-import profilePicture from '@assets/profile_picture.jpg'
+import profilePicture from '@assets/profile_picture2.png'
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false)
