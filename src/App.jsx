@@ -16,10 +16,14 @@ const RedirectHandler = () => {
   const navigate = useNavigate()
   
   useEffect(() => {
-    if (window.__REDIRECT__) {
-      const redirectPath = window.__REDIRECT__.replace('/jonathancw-tang', '')
+    const storedRedirect = sessionStorage.getItem('postBuildRedirect')
+    const redirect = window.__REDIRECT__ || storedRedirect
+
+    if (redirect) {
+      const redirectPath = redirect.replace('/jonathancw-tang', '')
       navigate(redirectPath, { replace: true })
       delete window.__REDIRECT__
+      sessionStorage.removeItem('postBuildRedirect')
     }
   }, [navigate])
   
