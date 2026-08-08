@@ -11,8 +11,10 @@
       // Store it so React can access it
       sessionStorage.setItem('postBuildRedirect', redirect);
       
-      // Redirect to the root so React Router can handle it
-      window.location.replace(window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1));
+      // Redirect to the app root so React Router can handle the stored path.
+      // GitHub Pages serves this 404 for every deep link, so redirecting to the
+      // current folder can trap nested routes in a refresh loop.
+      window.location.replace('/jonathancw-tang/');
     </script>
   </head>
   <body>
