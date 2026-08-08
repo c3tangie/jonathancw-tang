@@ -11,6 +11,8 @@ import AimsunProject from './Pages/projects/AimsunProject'
 import ConcreteProject from './Pages/projects/ConcreteProject'
 import TransportationProject from './Pages/projects/TransportationProject'
 import GroundwaterProject from './Pages/projects/GroundwaterProject'
+import NavisAIProject from './Pages/projects/NavisAIProject'
+import BrightwayToCanadaProject from './Pages/projects/BrightwayToCanadaProject'
 
 const RedirectHandler = () => {
   const navigate = useNavigate()
@@ -42,6 +44,8 @@ const App = () => {
         <Route path="/projects/concrete" element={<ConcreteProject />} />
         <Route path="/projects/transportation" element={<TransportationProject />} />
         <Route path="/projects/groundwater" element={<GroundwaterProject />} />
+        <Route path="/projects/navisai" element={<NavisAIProject />} />
+        <Route path="/projects/brightway-to-canada" element={<BrightwayToCanadaProject />} />
         <Route path="/about" element={<About />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/resume" element={<Resume />} />

@@ -10,6 +10,22 @@ const ProjectsGrid = () => {
 
   const projects = [
     {
+      id: 5,
+      title: "NavisAI",
+      date: "May 2026 - Present",
+      tags: ["Artificial Intelligence", "Neural Network", "Version Control"],
+      path: "/projects/navisai",
+      thumbnail: null
+    },
+    {
+      id: 6,
+      title: "Brightway to Canada",
+      date: "May 2025 - Present",
+      tags: ["Web Design", "Fullstack Development", "Version Control"],
+      path: "/projects/brightway-to-canada",
+      thumbnail: null
+    },
+    {
       id: 1,
       title: "Aimsun Microsimulation Project",
       date: "February 2026 - April 2026",
@@ -63,11 +79,13 @@ const ProjectsGrid = () => {
                 </div>
               </div>
             ) : (
-              <div className="bg-gradient-to-r from-slate-700 to-slate-800 h-48 flex items-center justify-center flex-shrink-0" style={{ background: 'linear-gradient(to right, #334e68, #2a3d54)' }}>
-                <span className="text-white text-center px-4">
-                  <p className="text-sm font-semibold">{project.date}</p>
-                  <p className="text-lg font-bold">{project.title}</p>
-                </span>
+              <div className="relative h-96 overflow-hidden flex items-center justify-center flex-shrink-0 bg-gradient-to-r from-slate-700 to-slate-800" style={{ background: 'linear-gradient(to right, #334e68, #2a3d54)' }}>
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-end justify-start p-6">
+                  <div>
+                    <p className="text-base font-semibold text-gray-200">{project.date}</p>
+                    <p className="text-2xl font-bold text-white">{project.title}</p>
+                  </div>
+                </div>
               </div>
             )}
             <div className="pb-6 px-6 flex-grow flex flex-col">

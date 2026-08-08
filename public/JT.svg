@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="260 230 530 530" fill="none">
+  <defs>
+    <linearGradient id="gradMain" x1="295" y1="499" x2="752" y2="499" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0D4DFF"></stop>
+      <stop offset="55%" stop-color="#1984FF"></stop>
+      <stop offset="100%" stop-color="#18C8FF"></stop>
+    </linearGradient>
+    <linearGradient id="gradT" x1="430" y1="425" x2="594" y2="670" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1D56FF"></stop>
+      <stop offset="55%" stop-color="#1F7BFF"></stop>
+      <stop offset="100%" stop-color="#18C8FF"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Top bar -->
+  <path d="M325 327H752L711 397H379C360 397 348 390 341 379C336 370 331 355 325 327Z" fill="url(#gradMain)"></path>
+
+  <!-- J -->
+  <path d="M433 425H489V543C489 572 481 596 466 617C450 640 434 653 414 659C398 664 383 666 361 666H295L319 589H386C415 589 433 570 433 543V425Z" fill="url(#gradMain)"></path>
+
+  <!-- T stem / second stroke -->
+  <path d="M513 397H594V557C594 602 577 636 551 653C527 668 497 674 430 670C465 659 490 645 507 625C526 603 513 578 513 553V397Z" fill="url(#gradT)"></path>
+</svg>
