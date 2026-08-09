@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 
 const ContactForm = () => {
-  const recipientEmail = 'jonathancw.tang@mail.utoronto.ca'
-  const formEndpoint = `https://formsubmit.co/ajax/${recipientEmail}`
+  const web3FormsEndpoint = 'https://api.web3forms.com/submit'
+  const web3FormsApiKey = import.meta.env.VITE_WEB3FORMS_API_KEY
+  const isEmailConfigured = Boolean(web3FormsApiKey)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -23,28 +24,38 @@ const ContactForm = () => {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
+    if (!isEmailConfigured) {
+      setSubmitStatus('setup')
+      setIsSubmitting(false)
+      return
+    }
+
     const controller = new AbortController()
     const timeoutId = window.setTimeout(() => controller.abort(), 12000)
-    const payload = new FormData()
-    payload.append('name', formData.name)
-    payload.append('email', formData.email)
-    payload.append('_replyto', formData.email)
-    payload.append('message', formData.message)
-    payload.append('_subject', `Portfolio message from ${formData.name}`)
-    payload.append('_template', 'table')
-    payload.append('_url', window.location.href)
 
     try {
-      const response = await fetch(formEndpoint, {
+      const response = await fetch(web3FormsEndpoint, {
         method: 'POST',
         headers: {
+          'Content-Type': 'application/json',
           Accept: 'application/json'
         },
-        body: payload,
+        body: JSON.stringify({
+          access_key: web3FormsApiKey,
+          subject: `Portfolio message from ${formData.name}`,
+          from_name: 'Jonathan Tang Portfolio',
+          name: formData.name,
+          email: formData.email,
+          replyto: formData.email,
+          message: formData.message,
+          botcheck: ''
+        }),
         signal: controller.signal
       })
 
-      if (!response.ok) {
+      const result = await response.json()
+
+      if (!response.ok || !result.success) {
         throw new Error('Unable to submit form')
       }
 
@@ -122,6 +133,11 @@ const ContactForm = () => {
         {submitStatus === 'error' && (
           <p className="text-sm font-medium text-red-700">
             Something went wrong or the request timed out. Please try again or email me directly.
+          </p>
+        )}
+        {submitStatus === 'setup' && (
+          <p className="text-sm font-medium text-red-700">
+            Email sending is not configured yet. Add the Web3Forms API key to enable this form.
           </p>
         )}
       </form>
