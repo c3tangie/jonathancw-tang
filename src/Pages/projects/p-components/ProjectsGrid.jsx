@@ -4,6 +4,8 @@ import tp_tn from '@assets/tp_tn.jpg'
 import gw_tn from '@assets/gw_tn.jpg'
 import br_tn from '@assets/br_tn.jpg'
 import mc_tn from '@assets/mc_tn.jpg'
+import btc_tn from '@assets/btc_tn.png'
+import na_tn from '@assets/na_tn.png'
 
 const ProjectsGrid = () => {
   const navigate = useNavigate()
@@ -15,7 +17,7 @@ const ProjectsGrid = () => {
       date: "May 2026 - Present",
       tags: ["Artificial Intelligence", "Neural Network", "Version Control"],
       path: "/projects/navisai",
-      thumbnail: null
+      thumbnail: na_tn
     },
     {
       id: 6,
@@ -23,7 +25,7 @@ const ProjectsGrid = () => {
       date: "May 2025 - Present",
       tags: ["Web Design", "Fullstack Development", "Version Control"],
       path: "/projects/brightway-to-canada",
-      thumbnail: null
+      thumbnail: btc_tn
     },
     {
       id: 1,
