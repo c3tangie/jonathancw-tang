@@ -1,12 +1,17 @@
-import { useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isPageLong, setIsPageLong] = useState(false);
+  const [isHidingAfterClick, setIsHidingAfterClick] = useState(false);
+  const hideTimerRef = useRef(null);
 
   const handleScroll = () => {
-    const quarterHeight = document.documentElement.scrollHeight / 4;
+    const quarterHeight = document.documentElement.scrollHeight / 18;
     const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollPos <= quarterHeight) {
+      setIsHidingAfterClick(false);
+    }
     setIsVisible(scrollPos > quarterHeight);
   };
 
@@ -18,6 +23,11 @@ const BackToTop = () => {
   };
 
   const scrollToTop = () => {
+    clearTimeout(hideTimerRef.current);
+    hideTimerRef.current = setTimeout(() => {
+      setIsHidingAfterClick(true);
+    }, 200);
+
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -46,10 +56,11 @@ const BackToTop = () => {
       window.removeEventListener('touchmove', handleScroll);
       window.removeEventListener('resize', checkPageLength);
       clearInterval(checkTimer);
+      clearTimeout(hideTimerRef.current);
     };
   }, []);
 
-  const shouldShow = isVisible && isPageLong;
+  const shouldShow = isVisible && isPageLong && !isHidingAfterClick;
 
   return (
     <div className="scroll-to-top">
