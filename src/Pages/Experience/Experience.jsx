@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
-import BackToTop from '@components/BackToTopButton'
 import tp1 from '@assets/tp_1.png'
 import tp2 from '@assets/tp_2.png'
 import tp3 from '@assets/tp_3.png'
@@ -201,7 +200,6 @@ const Experience = () => {
         </section>
       </main>
 
-      <BackToTop />
       <Footer />
     </div>
   )

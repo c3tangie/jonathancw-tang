@@ -4,7 +4,6 @@ import ContactHero from './c-components/ContactHero'
 import ContactForm from './c-components/ContactForm'
 import ContactInfo from './c-components/ContactInfo'
 import Footer from '@components/Footer'
-import BackToTop from '@components/BackToTopButton'
 
 const Contact = () => {
   return (
@@ -15,7 +14,6 @@ const Contact = () => {
         <ContactForm />
         <ContactInfo />
       </div>
-      <BackToTop />
       <Footer />
     </div>
   )

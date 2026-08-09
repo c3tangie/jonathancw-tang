@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
-import BackToTop from '@components/BackToTopButton'
 import profilePicture from '@assets/profile_picture.jpg'
 
 const Home = () => {
@@ -215,7 +214,6 @@ const Home = () => {
         </div>
       </section>
 
-      <BackToTop />
       <Footer />
       
       {/* Custom animations */}

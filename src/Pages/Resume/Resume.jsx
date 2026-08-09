@@ -1,7 +1,6 @@
 import React from 'react'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
-import BackToTop from '@components/BackToTopButton'
 import resumeBanner from '@assets/resume_banner.jpg'
 
 const Resume = () => {
@@ -92,7 +91,6 @@ const Resume = () => {
         </div>
       </div>
 
-      <BackToTop />
       <Footer />
     </div>
   )

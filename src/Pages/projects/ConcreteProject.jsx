@@ -2,7 +2,6 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
-import ScrollToTop from '@components/ScrollToTop'
 import autocad from '@assets/autocad.png'
 import concExcel from '@assets/conc_excel.png'
 import designWorkbook from '@assets/design_workbook.jpeg'
@@ -14,13 +13,11 @@ const ConcreteProject = () => {
 
   const handleBackClick = () => {
     navigate('/projects')
-    window.scrollTo({ top: 0, behavior: 'auto' })
   }
 
   return (
     <div>
       <Navbar />
-      <ScrollToTop />
       <section className="max-w-7xl mx-auto sm:px-10 py-16">
       <h2 className="text-4xl font-bold text-gray-900 mb-8">Concrete Bridge Design Project (February 2026 - April 2026)</h2>
 

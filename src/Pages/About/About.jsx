@@ -4,7 +4,6 @@ import AboutHero from './a-components/AboutHero'
 import AboutContent from './a-components/AboutContent'
 import Skills from './a-components/Skills'
 import Footer from '@components/Footer'
-import BackToTop from '@components/BackToTopButton'
 
 const About = () => {
   return (
@@ -13,7 +12,6 @@ const About = () => {
       <AboutHero />
       <AboutContent />
       <Skills />
-      <BackToTop />
       <Footer />
     </div>
   )

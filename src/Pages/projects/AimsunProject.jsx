@@ -2,7 +2,6 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
-import ScrollToTop from '@components/ScrollToTop'
 import Aimsun_GIF from '@assets/aimsun_gif.gif'
 import odMatrix from '@assets/od_matrix.png'
 import odMatrix2 from '@assets/od_matrix2.png'
@@ -14,13 +13,11 @@ const AimsunProject = () => {
 
   const handleBackClick = () => {
     navigate('/projects')
-    window.scrollTo({ top: 0, behavior: 'auto' })
   }
 
   return (
     <div>
       <Navbar />
-      <ScrollToTop />
       <section className="max-w-7xl mx-auto sm:px-10 py-16">
       <h2 className="text-4xl font-bold text-gray-900 mb-8">Aimsun Microsimulation Project (February 2026 - April 2026)</h2>
       <img src={planView} className="float-right ml-8 h-80 sm:h-64 w-[350px] sm:w-[470px] object-cover rounded-lg shadow-lg object-center" />

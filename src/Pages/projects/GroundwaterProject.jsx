@@ -2,7 +2,6 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
-import ScrollToTop from '@components/ScrollToTop'
 import IMG_5821 from '@assets/IMG_5821.jpg'
 import IMG_5829 from '@assets/IMG_5829.jpg'
 import IMG_5830 from '@assets/IMG_5830.jpg'
@@ -24,13 +23,11 @@ const GroundwaterProject = () => {
 
   const handleBackClick = () => {
     navigate('/projects')
-    window.scrollTo({ top: 0, behavior: 'auto' })
   }
 
   return (
     <div>
       <Navbar />
-      <ScrollToTop />
       <section className="max-w-7xl mx-auto sm:px-10 py-16">
       <h2 className="text-4xl font-bold text-gray-900 mb-8">Groundwater Research Intern (May - July 2024)</h2>
 

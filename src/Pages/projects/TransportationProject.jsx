@@ -2,7 +2,6 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
-import ScrollToTop from '@components/ScrollToTop'
 import tp1 from '@assets/tp_1.png'
 import tp2 from '@assets/tp_2.png'
 import tp4 from '@assets/tp_4.png'
@@ -12,13 +11,11 @@ const TransportationProject = () => {
 
   const handleBackClick = () => {
     navigate('/projects')
-    window.scrollTo({ top: 0, behavior: 'auto' })
   }
 
   return (
     <div>
       <Navbar />
-      <ScrollToTop />
       <section className="max-w-7xl mx-auto sm:px-10 py-16">
       <h2 className="text-4xl font-bold text-gray-900 mb-8">Transportation Impacts Video Project (December 2025)</h2>
       <p className="text-lg text-gray-700 mb-12 leading-relaxed">

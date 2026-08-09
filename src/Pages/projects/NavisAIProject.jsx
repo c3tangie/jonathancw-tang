@@ -2,20 +2,17 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
-import ScrollToTop from '@components/ScrollToTop'
 
 const NavisAIProject = () => {
   const navigate = useNavigate()
 
   const handleBackClick = () => {
     navigate('/projects')
-    window.scrollTo({ top: 0, behavior: 'auto' })
   }
 
   return (
     <div>
       <Navbar />
-      <ScrollToTop />
       <section className="max-w-7xl mx-auto sm:px-10 py-16">
         <h2 className="text-4xl font-bold text-gray-900 mb-8">NavisAI (May 2026 - Present)</h2>
         <div className="bg-white rounded-lg shadow-lg p-8">
