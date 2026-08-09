@@ -1,11 +1,15 @@
 import React, { useState } from 'react'
 
 const ContactForm = () => {
+  const recipientEmail = 'jonathancw.tang@mail.utoronto.ca'
+  const formEndpoint = `https://formsubmit.co/ajax/${recipientEmail}`
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   })
+  const [submitStatus, setSubmitStatus] = useState(null)
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
   const handleChange = (e) => {
     setFormData({
@@ -14,12 +18,45 @@ const ContactForm = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Add your form submission logic here
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message! I\'ll get back to you soon.')
-    setFormData({ name: '', email: '', message: '' })
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    const controller = new AbortController()
+    const timeoutId = window.setTimeout(() => controller.abort(), 12000)
+    const payload = new FormData()
+    payload.append('name', formData.name)
+    payload.append('email', formData.email)
+    payload.append('_replyto', formData.email)
+    payload.append('message', formData.message)
+    payload.append('_subject', `Portfolio message from ${formData.name}`)
+    payload.append('_template', 'table')
+    payload.append('_url', window.location.href)
+
+    try {
+      const response = await fetch(formEndpoint, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json'
+        },
+        body: payload,
+        signal: controller.signal
+      })
+
+      if (!response.ok) {
+        throw new Error('Unable to submit form')
+      }
+
+      setSubmitStatus('success')
+      setFormData({ name: '', email: '', message: '' })
+    } catch (error) {
+      console.error('Form submission failed:', error)
+      setSubmitStatus('error')
+    } finally {
+      window.clearTimeout(timeoutId)
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -72,10 +109,21 @@ const ContactForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-navy-700 text-white py-3 rounded-lg hover:bg-navy-800 transition-colors font-medium"
+          disabled={isSubmitting}
+          className="w-full bg-navy-700 text-white py-3 rounded-lg hover:bg-navy-800 transition-colors font-medium disabled:cursor-not-allowed disabled:opacity-70"
         >
-          Send Message
+          {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
+        {submitStatus === 'success' && (
+          <p className="text-sm font-medium text-green-700">
+            Message sent. Thank you for reaching out.
+          </p>
+        )}
+        {submitStatus === 'error' && (
+          <p className="text-sm font-medium text-red-700">
+            Something went wrong or the request timed out. Please try again or email me directly.
+          </p>
+        )}
       </form>
     </div>
   )
