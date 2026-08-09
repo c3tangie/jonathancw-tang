@@ -55,28 +55,39 @@ const BackToTop = () => {
     <div className="scroll-to-top">
       <button 
         onClick={scrollToTop}
-        className={`z-[99] back-to-top fixed bottom-8 right-0 bg-gradient-to-l from-white/60 to-white/40 backdrop-blur-md shadow-lg hover:from-white/80 hover:to-white/60 hover:shadow-xl transition-all duration-500 w-10 h-20 flex items-center justify-center text-gray-800 hover:text-gray-900 border border-gray-300/50 border-r-0 rounded-l-full hover:pl-2 group
+        aria-label="Scroll back to top"
+        title="Back to top"
+        className={`z-[99] back-to-top fixed bottom-6 right-6 md:bottom-8 md:right-8 flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray-200 bg-white/90 text-gray-700 shadow-sm transition-all duration-300 group hover:-translate-y-1 hover:scale-110 hover:border-slate-700 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white
         ${shouldShow 
           ? 'translate-x-0 opacity-100 visible' 
-          : 'translate-x-full opacity-0 invisible'
+          : 'translate-x-4 opacity-0 invisible'
         } 
-        transition-all duration-500 ease-out`}
+        `}
         style={{
           pointerEvents: shouldShow ? 'auto' : 'none',
           cursor: shouldShow ? 'pointer' : 'default'
         }}
       >
-        <div className={`flex flex-col items-center transition-all duration-300
-          ${shouldShow ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'}`}>
-          <span className="text-xl font-bold transform -rotate-90 group-hover:-translate-y-1 group-hover:scale-110 transition-all duration-300">↑</span>
-          <span className="text-xs font-medium transform -rotate-90 mt-2 opacity-70 group-hover:opacity-100 transition-opacity duration-300">
-            Top
-          </span>
+        <span className="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 whitespace-nowrap rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-medium tracking-wide text-gray-600 opacity-0 shadow-sm transition-all duration-300 group-hover:opacity-100 md:block">
+          Top
+        </span>
+
+        <div className={`flex items-center justify-center transition-all duration-300
+          ${shouldShow ? 'scale-100 opacity-100' : 'scale-90 opacity-0'}`}>
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            className="h-6 w-6 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:scale-110"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M12 19V5" />
+            <path d="M6.5 10.5L12 5l5.5 5.5" />
+          </svg>
         </div>
-        
-        {/* Decorative element that also transitions */}
-        <div className={`absolute -left-1 top-1/2 transform -translate-y-1/2 w-0 h-0 bg-gradient-to-r from-gray-300/30 to-transparent rounded-r-full transition-all duration-500
-          ${shouldShow ? 'opacity-100' : 'opacity-0'}`}></div>
       </button>
     </div>
   );
