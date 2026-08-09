@@ -1,14 +1,14 @@
 import React from 'react'
-import bannerImage from '@assets/about_me_banner.jpg'
+import bannerImage from '@assets/about_me_banner_optimized.jpg'
+import HeroImage from '@components/HeroImage'
 
 const AboutHero = () => {
   return (
     <section className="relative text-white py-20 bg-cover bg-center overflow-hidden">
       {/* Banner image */}
-      <img
+      <HeroImage
         src={bannerImage}
         alt="About me banner"
-        className="absolute inset-0 w-full h-full object-cover"
       />
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>

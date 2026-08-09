@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from '@components/Navbar'
 import Footer from '@components/Footer'
-import resumeBanner from '@assets/resume_banner.jpg'
+import HeroImage from '@components/HeroImage'
+import resumeBanner from '@assets/resume_banner_optimized.jpg'
 
 const Resume = () => {
   // Points to your resume PDF in the public folder
@@ -23,10 +24,9 @@ const Resume = () => {
       {/* Hero Section */}
       <section className="relative text-white py-20 bg-cover bg-center overflow-hidden">
         {/* Banner image */}
-        <img
+        <HeroImage
           src={resumeBanner}
           alt="Resume banner"
-          className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>

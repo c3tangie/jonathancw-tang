@@ -8,7 +8,13 @@ const Home = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    setIsVisible(true)
+    const animationFrame = window.requestAnimationFrame(() => {
+      setIsVisible(true)
+    })
+
+    return () => {
+      window.cancelAnimationFrame(animationFrame)
+    }
   }, [])
 
   return (
@@ -42,6 +48,9 @@ const Home = () => {
                     <img 
                       src={profilePicture} 
                       alt="Jonathan Tang" 
+                      loading="eager"
+                      decoding="async"
+                      fetchPriority="high"
                       className="w-full h-full object-cover"
                     />
                   </div>

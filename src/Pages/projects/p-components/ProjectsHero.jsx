@@ -1,12 +1,11 @@
 import React from 'react'
-import project_tn from '@assets/project_tn.jpg'
+import project_tn from '@assets/project_tn_optimized.jpg'
+import HeroImage from '@components/HeroImage'
 
 const ProjectsHero = () => {
   return (
-    <section 
-      className="relative text-white py-20 bg-cover bg-center"
-      style={{ backgroundImage: `url(${project_tn})` }}
-    >
+    <section className="relative overflow-hidden bg-slate-800 text-white py-20">
+      <HeroImage src={project_tn} alt="Projects banner" />
       {/* Dark overlay for readability */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       
